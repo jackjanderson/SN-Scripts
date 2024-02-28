@@ -1,0 +1,13 @@
+// Before BR on update
+// When state changes to Pending approval OR In review
+// Advanced checked
+//Was implemented on BIA analysis to validate that at least one Vendor Dependency record was created when certain conditions were met
+
+var gr = new GlideRecord('sn_bia_dependency');
+gr.addQuery('impact_analysis', current.sys_id);
+gr.addQuery('dependency_group.element_definition.name','LIKE','Vendors');
+gr.query();
+if (gr.getRowCount()==0){
+  gs.addErrorMessage("At least one Vendor Dependency record must be created to continue when impact rating is greater than 50");
+  current.setAbortAction(true);
+}
