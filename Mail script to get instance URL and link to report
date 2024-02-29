@@ -1,0 +1,9 @@
+//Mail script to print link that displays "Click here"
+
+var instanceURL = gs.getProperty('glide.servlet.uri');
+
+var dashboardLink = instanceURL + "/$pa_dashboardLinkhere";
+
+var link '<a href = "' + dashboardLink + '">Click here</a>;
+
+template.print(link);
