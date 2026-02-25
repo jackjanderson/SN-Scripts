@@ -1,9 +1,0 @@
-// before business rule - Auto Populate Policy based on COBJ
-
-var gr = new GlideRecord('sn_compliance_m2m_policy_policy_statement');
-gr.addQuery('content',current.policy_statement);
-gr.query();
-
-while(gr.next()){
-
-current.policy = gr.document;

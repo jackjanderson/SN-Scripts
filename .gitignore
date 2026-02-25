@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Node (if using SN CLI or linting tools)
+node_modules/
+package-lock.json
+
+# ServiceNow
+*.xml.bak
+
+# Logs
+*.log
